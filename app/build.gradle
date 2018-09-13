@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion "26.0.2"
     defaultConfig {
-        applicationId "com.ragentek.rgktranslate"
+        applicationId "com.ragentek"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
@@ -34,5 +34,3 @@ dependencies {
     compile 'com.android.support:appcompat-v7:27.+'
     testCompile 'junit:junit:4.12'
 }
-
-

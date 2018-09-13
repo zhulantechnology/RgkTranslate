@@ -1,4 +1,4 @@
-package com.ragentek.rgktranslate;
+package com.ragentek.activity;
 
 import org.junit.Test;
 

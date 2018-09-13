@@ -1,4 +1,4 @@
-package com.ragentek.rgktranslate;
+package com.ragentek.activity;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ragentek.rgktranslate", appContext.getPackageName());
+        assertEquals("com.ragentek.activity", appContext.getPackageName());
     }
 }

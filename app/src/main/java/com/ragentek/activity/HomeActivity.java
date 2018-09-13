@@ -1,9 +1,11 @@
-package com.ragentek.rgktranslate;
+package com.ragentek.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class HomeActivity extends AppCompatActivity {
+import com.ragentek.R;
+import com.ragentek.activity.base.BaseActivity;
+
+public class HomeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
