@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RgkTranslate</string>
+
+    <string name="voice_translate">Voice Translation</string>
+    <string name="walkie_talkie">walkie talkie</string>
+    <string name="photo_translation">Photo Translation</string>
+    <string name="map">Map</string>
+    <string name="exanchange">Exanchange</string>
+    <string name="voice_wizard">Voice Wizard</string>
+
 </resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RgkTranslate</string>
+
+    <string name="voice_translate">翻译</string>
+    <string name="walkie_talkie">对讲</string>
+    <string name="photo_translation">拍照翻译</string>
+    <string name="map">地图</string>
+    <string name="exanchange">汇率</string>
+    <string name="voice_wizard">景点导览</string>
+
+</resources>
