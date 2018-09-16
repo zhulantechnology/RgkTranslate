@@ -34,16 +34,16 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
     private LinkedList<String> linkedList = new LinkedList<String>();
 
 
-
+private Map map;
     private void initBgs() {
-        Map map=new HashMap();
+        map=new HashMap();
         map.put("R.drawable.bg_american",R.drawable.bg_american);
-        map.put("R.drawable.bg_american",R.drawable.bg_american);
-        map.put("R.drawable.bg_american",R.drawable.bg_american);
-        map.put("R.drawable.bg_american",R.drawable.bg_american);
-        map.put("R.drawable.bg_american",R.drawable.bg_american);
+        map.put("R.drawable.bg_american",R.drawable.bg_china);
+        map.put("R.drawable.bg_american",R.drawable.bg_england);
+        map.put("R.drawable.bg_american",R.drawable.bg_russian);
+        getResources().getIdentifier("bg_american","drawable","com.ragentek.activity");
 
-        menu.bitmap = BitmapFactory.decodeResource(getResources(),map.get("R.drawable.menu_"+01));
+       // menu.bitmap = BitmapFactory.decodeResource(getResources(),map.get("R.drawable.menu_"+01));
     }
 
     @Override
@@ -129,7 +129,10 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
         country_list country = country_list.values()[index];
         Log.e("XXX", "COUNTRY-------:" + country);
         if (index > 2) {
-            mainLayout.setBackgroundResource(R.drawable.wallpaper_bg);
+           // mainLayout.setBackgroundResource(R.drawable.wallpaper_bg);
+
+            mainLayout.setBackgroundResource(getResources()
+                    .getIdentifier("club","drawable","com.ragentek.activity"));
         } else {
             mainLayout.setBackgroundResource(R.drawable.wallpaper_16);
         }
