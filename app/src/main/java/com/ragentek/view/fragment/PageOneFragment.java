@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ragentek.activity.R;
+import com.ragentek.database.SPManager;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -62,6 +63,9 @@ public class PageOneFragment extends Fragment {
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(
                 getActivity(), android.R.layout.simple_spinner_item, getSpinnerData());
         countrySpinner.setAdapter(spinnerAdapter);
+
+        int currentCountry =  SPManager.getInstance().getInt(SPManager.CURRENT_COUNTRY, 0);
+        countrySpinner.setSelection(currentCountry);
         countrySpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
             @Override
@@ -97,10 +101,10 @@ public class PageOneFragment extends Fragment {
     private List<String> getSpinnerData() {
         // 数据源
         List<String> dataList = new ArrayList<String>();
-        dataList.add("北京");
-        dataList.add("上海");
-        dataList.add("南京");
-        dataList.add("宜昌");
+        dataList.add("美国");
+        dataList.add("中国");
+        dataList.add("英国");
+        dataList.add("俄罗斯");
         return dataList;
     }
 

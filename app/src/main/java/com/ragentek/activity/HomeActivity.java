@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 
 import com.ragentek.activity.base.BaseActivity;
 import com.ragentek.adapter.PagesAdapter;
+import com.ragentek.database.SPManager;
 import com.ragentek.view.fragment.PageOneFragment;
 import com.ragentek.view.fragment.PageTwoFragment;
 
@@ -21,7 +22,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class HomeActivity extends BaseActivity implements ViewPager.OnPageChangeListener,PageOneFragment.updateBg {
+import static com.ragentek.constant.TranConstant.countryBgArray;
+
+public class HomeActivity extends BaseActivity implements ViewPager.OnPageChangeListener,
+        PageOneFragment.updateBg {
 
     private ViewPager viewPager;
     private PagesAdapter adapter;
@@ -32,6 +36,8 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
     private ImageView[] tips;
     private ViewGroup indicationsGroup;
     private LinkedList<String> linkedList = new LinkedList<String>();
+
+    private SPManager spManager;
 
 
 private Map map;
@@ -51,7 +57,10 @@ private Map map;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
         mainLayout = findViewById(R.id.main_layout);
-        //mainLayout.setBackgroundResource(R.drawable.wallpaper_bg);
+        spManager = SPManager.getInstance();
+       int currentCountry = spManager.getInt(SPManager.CURRENT_COUNTRY, 0);
+        Log.e("XXX", "ONCREATE---currentCountry-----: "+ currentCountry);
+        mainLayout.setBackgroundResource(countryBgArray[currentCountry]);
 
         indicationsGroup= (ViewGroup) findViewById(R.id.indication_layout);
         viewPager = (ViewPager) findViewById(R.id.home_view_pager);
@@ -126,15 +135,8 @@ private Map map;
     }
     @Override
     public void changeWallpaper(int index) {
-        country_list country = country_list.values()[index];
-        Log.e("XXX", "COUNTRY-------:" + country);
-        if (index > 2) {
-           // mainLayout.setBackgroundResource(R.drawable.wallpaper_bg);
-
-            mainLayout.setBackgroundResource(getResources()
-                    .getIdentifier("club","drawable","com.ragentek.activity"));
-        } else {
-            mainLayout.setBackgroundResource(R.drawable.wallpaper_16);
-        }
+        
+        mainLayout.setBackgroundResource(countryBgArray[index]);
+        spManager.putInt(SPManager.CURRENT_COUNTRY, index);
     }
 }
