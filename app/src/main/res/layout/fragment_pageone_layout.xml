@@ -8,28 +8,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
         >
 
         <Spinner
             android:id="@+id/country_spinner_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             />
-
-
-
-        <ImageView
-            android:id="@+id/setting_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-
-            android:src="@drawable/setting"/>
-
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/date_time_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_setting_layout"
@@ -53,35 +44,164 @@
 
     </RelativeLayout>
 
-    <GridView
-        android:id="@+id/first_grid_view"
+    <LinearLayout
+        android:id="@+id/first_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/date_time_view"
+        android:layout_marginLeft="30dp">
 
-        android:layout_centerInParent="true"
-        android:columnWidth="100dp"
-        android:stretchMode="spacingWidthUniform"
-        android:numColumns="2"
-        android:verticalSpacing="13dp"
-        android:horizontalSpacing="3dp"
-        />
+        <LinearLayout
+            android:id="@+id/photo_translate_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/photo_translate_bg"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/photo_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/photo_translate"
+                />
+            <TextView
+                android:id="@+id/photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:text="Photo Translate"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/map_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/map_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/map_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/map"
+                />
+            <TextView
+                android:id="@+id/map_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:text="Map"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_line"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:id="@+id/exchange_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/exchange_bg"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/exchange_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/exchange"
+                />
+            <TextView
+                android:id="@+id/exchange_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:text="Photo Translate"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wizard_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/wizard_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/wizard_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/voice_wizard"
+                />
+            <TextView
+                android:id="@+id/wizard_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:text="Voice Wizard"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/sos"
+            android:src="@drawable/setting"
             />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/sos"/>
 
     </LinearLayout>

@@ -17,10 +17,8 @@ import com.ragentek.view.fragment.PageOneFragment;
 import com.ragentek.view.fragment.PageTwoFragment;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
+
 
 import static com.ragentek.constant.TranConstant.countryBgArray;
 
@@ -35,22 +33,9 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
     // 提示icon
     private ImageView[] tips;
     private ViewGroup indicationsGroup;
-    private LinkedList<String> linkedList = new LinkedList<String>();
-
+    
     private SPManager spManager;
 
-
-private Map map;
-    private void initBgs() {
-        map=new HashMap();
-        map.put("R.drawable.bg_american",R.drawable.bg_american);
-        map.put("R.drawable.bg_american",R.drawable.bg_china);
-        map.put("R.drawable.bg_american",R.drawable.bg_england);
-        map.put("R.drawable.bg_american",R.drawable.bg_russian);
-        getResources().getIdentifier("bg_american","drawable","com.ragentek.activity");
-
-       // menu.bitmap = BitmapFactory.decodeResource(getResources(),map.get("R.drawable.menu_"+01));
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +43,10 @@ private Map map;
         setContentView(R.layout.activity_home_layout);
         mainLayout = findViewById(R.id.main_layout);
         spManager = SPManager.getInstance();
-       int currentCountry = spManager.getInt(SPManager.CURRENT_COUNTRY, 0);
-        Log.e("XXX", "ONCREATE---currentCountry-----: "+ currentCountry);
-        mainLayout.setBackgroundResource(countryBgArray[currentCountry]);
+        // set bg accord country
+      // int currentCountry = spManager.getInt(SPManager.CURRENT_COUNTRY, 0);
+      //  mainLayout.setBackgroundResource(countryBgArray[currentCountry]);
+        mainLayout.setBackgroundResource(R.drawable.fix_bg);
 
         indicationsGroup= (ViewGroup) findViewById(R.id.indication_layout);
         viewPager = (ViewPager) findViewById(R.id.home_view_pager);
@@ -127,15 +113,9 @@ private Map map;
             }
         }
     }
-    enum country_list {
-        china,
-        usa,
-        russian,
-        england
-    }
+
     @Override
     public void changeWallpaper(int index) {
-        
         mainLayout.setBackgroundResource(countryBgArray[index]);
         spManager.putInt(SPManager.CURRENT_COUNTRY, index);
     }

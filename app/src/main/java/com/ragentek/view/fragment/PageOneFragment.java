@@ -12,8 +12,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,9 +21,7 @@ import com.ragentek.database.SPManager;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,27 +30,20 @@ import java.util.Map;
  */
 
 public class PageOneFragment extends Fragment {
-    private GridView firstGridView;
+
     private List<Map<String, Object>> dataList;
-    private SimpleAdapter adapter;
     private TextView timeView;
     private TextView dateView;
     private Spinner countrySpinner;
-
     private updateBg listerner;
 
-
-
-    public void setListerner(updateBg listerner) {
-        this.listerner = listerner;
-    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pageone_layout, container, false);
-        firstGridView = (GridView) view.findViewById(R.id.first_grid_view);
+
         timeView = view.findViewById(R.id.time_view);
         dateView = view.findViewById(R.id.date_view);
 
@@ -64,7 +53,7 @@ public class PageOneFragment extends Fragment {
                 getActivity(), android.R.layout.simple_spinner_item, getSpinnerData());
         countrySpinner.setAdapter(spinnerAdapter);
 
-        int currentCountry =  SPManager.getInstance().getInt(SPManager.CURRENT_COUNTRY, 0);
+        int currentCountry = SPManager.getInstance().getInt(SPManager.CURRENT_COUNTRY, 0);
         countrySpinner.setSelection(currentCountry);
         countrySpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
@@ -75,29 +64,24 @@ public class PageOneFragment extends Fragment {
                 Toast.makeText(getActivity(),
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
-                listerner.changeWallpaper(position);
+                //listerner.changeWallpaper(position);   // don't change
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // 这个一直没有触发，我也不知道什么时候被触发。
-                //在官方的文档上说明，为back的时候触发，但是无效，可能需要特定的场景
             }
         });
 
-        //初始化数据
-        initData();
         getDate();
-
-        String[] from={"img","text"};
-        int[] to={R.id.img,R.id.text};
-        adapter=new SimpleAdapter(getActivity(), dataList, R.layout.gridview_item, from, to);
-        firstGridView.setAdapter(adapter);
-
         new TimeThread().start();
 
         return view;
     }
+
+    public void setListerner(updateBg listerner) {
+        this.listerner = listerner;
+    }
+
     private List<String> getSpinnerData() {
         // 数据源
         List<String> dataList = new ArrayList<String>();
@@ -113,29 +97,13 @@ public class PageOneFragment extends Fragment {
         Date date = new Date(time);
         SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm");
         String data = format.format(date);
-        String dateStr = data.substring(0,10);
+        String dateStr = data.substring(0, 10);
         String timeStr = data.substring(11);
-        
+
         dateView.setText(dateStr);
         timeView.setText(timeStr);
     }
 
-    void initData() {
-        //图标
-        int icno[] = { R.drawable.fontmanager, R.drawable.messages };
-        //图标下的文字
-        String name[]={
-                getContext().getResources().getString(R.string.voice_translate),
-                getContext().getResources().getString(R.string.walkie_talkie)
-                };
-        dataList = new ArrayList<Map<String, Object>>();
-        for (int i = 0; i <icno.length; i++) {
-            Map<String, Object> map=new HashMap<String, Object>();
-            map.put("img", icno[i]);
-            map.put("text",name[i]);
-            dataList.add(map);
-        }
-    }
 
     class TimeThread extends Thread {
         @Override
@@ -161,7 +129,7 @@ public class PageOneFragment extends Fragment {
                 case 1:
                     long time = System.currentTimeMillis();
                     Date date = new Date(time);
-                   // SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 EEEE");
+                    // SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 EEEE");
                     SimpleDateFormat format = new SimpleDateFormat("HH:mm");
                     String data = format.format(date);
                     timeView.setText(data); //更新时间
