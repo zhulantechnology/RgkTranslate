@@ -71,4 +71,73 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/second_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_line"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:id="@+id/exchange_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/exchange_bg"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/exchange_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/exchange"
+                />
+            <TextView
+                android:id="@+id/exchange_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:text="Photo Translate"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wizard_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/wizard_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/wizard_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/voice_wizard"
+                />
+            <TextView
+                android:id="@+id/wizard_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:text="Voice Wizard"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>
