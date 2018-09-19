@@ -8,4 +8,13 @@
     <string name="exanchange">Exanchange</string>
     <string name="voice_wizard">Voice Wizard</string>
 
+    <!-- 国家-->
+    <string name="country_china" translatable="false">China</string>
+    <string name="country_america" translatable="false">America</string>
+    <string name="country_england" translatable="false">England</string>
+    <string name="country_austrain" translatable="false">Austrain</string>
+    <string name="country_russian" translatable="false">Russian</string>
+
+
+
 </resources>
