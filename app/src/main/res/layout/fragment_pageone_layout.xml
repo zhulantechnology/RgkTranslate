@@ -2,23 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+
+    <LinearLayout
         android:id="@+id/spinner_setting_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
-        >
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/country_spinner_view"
+        <TextView
+            android:id="@+id/country_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:spinnerMode="dialog"
-            />
-    </RelativeLayout>
+            android:textSize="30dp"
+             />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/triangle"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/date_time_view"
@@ -26,7 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_setting_layout"
         android:layout_marginLeft="50dp"
-        >
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp">
+
         <TextView
             android:id="@+id/time_view"
             android:layout_width="wrap_content"
@@ -35,13 +44,11 @@
 
         <TextView
             android:id="@+id/date_view"
-            android:layout_below="@+id/time_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/time_view"
             android:paddingLeft="15dp"
-            android:textSize="20dp"
-            />
-
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
@@ -50,92 +57,90 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/date_time_view"
-        android:layout_marginLeft="30dp">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
 
         <LinearLayout
-            android:id="@+id/photo_translate_view"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:id="@+id/voice_translate_layout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_menu_height"
+            android:layout_weight="1"
             android:layout_gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/photo_translate_bg"
             android:layout_marginTop="5dp"
-            >
+            android:background="@drawable/voice_bg"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/photo_img"
+                android:id="@+id/voice_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
-                android:src="@drawable/photo_translate"
-                />
+                android:layout_marginTop="@dimen/dimen_menu_img_margin_top"
+                android:src="@drawable/voice_translate" />
+
             <TextView
-                android:id="@+id/photo_text"
+                android:id="@+id/voice_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
-                android:textColor="#FFF"
-                android:text="Photo Translate"
-                />
+                android:layout_marginTop="20dp"
+                android:text="Voice Translate"
+                android:textSize="@dimen/dimen_menu_text_size"
+                android:textColor="#FFF" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/map_view"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:id="@+id/walkie_talkie_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen_menu_height"
             android:layout_gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/map_bg"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            >
+            android:background="@drawable/walkie_bg"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/map_img"
+                android:id="@+id/walkie_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
-                android:src="@drawable/map"
-                />
-            <TextView
-                android:id="@+id/map_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                android:textColor="#FFF"
-                android:text="Map"
-                />
+                android:layout_marginTop="@dimen/dimen_menu_img_margin_top"
+                android:src="@drawable/wakile_vakile" />
 
+            <TextView
+                android:id="@+id/walkie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Walkie Talkie"
+                android:textSize="@dimen/dimen_menu_text_size"
+                android:textColor="#FFF" />
         </LinearLayout>
 
     </LinearLayout>
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp">
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/setting"
-            />
+            android:src="@drawable/setting" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/sos"/>
+            android:src="@drawable/sos" />
 
     </LinearLayout>
 

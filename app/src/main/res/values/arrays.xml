@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="country_string_array">
+    <string-array name="country_name_array">
         <item>@string/country_china</item>
         <item>@string/country_america</item>
         <item>@string/country_england</item>
@@ -9,12 +9,20 @@
     </string-array>
 
     <array name="country_icons_array">
-        <item>@drawable/icon_american</item>
         <item>@drawable/icon_china</item>
+        <item>@drawable/icon_american</item>
         <item>@drawable/icon_england</item>
-        <item>@drawable/icon_russian</item>
         <item>@drawable/icon_austrain</item>
+        <item>@drawable/icon_russian</item>
     </array>
+
+    <string-array name="country_code_array">
+        <item>@string/language_code_zh_cn</item>
+        <item>@string/language_code_en_us</item>
+        <item>@string/language_code_en_in</item>
+        <item>@string/language_code_en_au</item>
+        <item>@string/language_code_ru_ru</item>
+    </string-array>
 
 
 

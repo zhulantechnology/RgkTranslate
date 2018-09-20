@@ -2,6 +2,8 @@ package com.ragentek.application;
 
 import android.app.Application;
 
+import com.ragentek.database.SPManager;
+
 /**
  * Created by Jun.wang on 2018/9/13.
  */

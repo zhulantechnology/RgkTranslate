@@ -24,6 +24,7 @@ public class SPManager {
      * 上次基金更新时间
      */
     public static final String CURRENT_COUNTRY = "current_country";
+    public static final String CURRENT_COUNTRY_CODE = "current_country_code";
 
     private SPManager() {
         sp = TranslateApplication.getInstance().getSharedPreferences(SHARE_PREFREENCE_NAME, Context.MODE_PRIVATE);

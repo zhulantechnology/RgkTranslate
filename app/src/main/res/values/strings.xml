@@ -8,12 +8,61 @@
     <string name="exanchange">Exanchange</string>
     <string name="voice_wizard">Voice Wizard</string>
 
+    <string name="string_title_bar_back">Back</string>
+
     <!-- 国家-->
     <string name="country_china" translatable="false">China</string>
     <string name="country_america" translatable="false">America</string>
     <string name="country_england" translatable="false">England</string>
     <string name="country_austrain" translatable="false">Austrain</string>
     <string name="country_russian" translatable="false">Russian</string>
+
+    <!-- 国家码 -->
+    <string name="language_code_zh_cn" translatable="false">zh-CN</string>
+    <string name="language_code_zh_hk" translatable="false">zh-HK</string>
+    <string name="language_code_en_us" translatable="false">en-US</string>
+    <string name="language_code_en_au" translatable="false">en-AU</string>
+    <string name="language_code_en_ca" translatable="false">en-CA</string>
+    <string name="language_code_en_gb" translatable="false">en-GB</string>
+    <string name="language_code_en_in" translatable="false">en-IN</string>
+    <string name="language_code_en_nz" translatable="false">en-NZ</string>
+    <string name="language_code_en_ie" translatable="false">en-IE</string>
+    <string name="language_code_ar_eg" translatable="false">ar-EG</string>
+    <string name="language_code_da_dk" translatable="false">da-DK</string>
+    <string name="language_code_de_de" translatable="false">de-DE</string>
+    <string name="language_code_es_es" translatable="false">es-ES</string>
+    <string name="language_code_es_mx" translatable="false">es-MX</string>
+    <string name="language_code_fi_fi" translatable="false">fi-FI</string>
+    <string name="language_code_fr_ca" translatable="false">fr-CA</string>
+    <string name="language_code_fr_fr" translatable="false">fr-FR</string>
+    <string name="language_code_it_it" translatable="false">it-IT</string>
+    <string name="language_code_ja_jp" translatable="false">ja-JP</string>
+    <string name="language_code_ko_kr" translatable="false">ko-KR</string>
+    <string name="language_code_nl_nl" translatable="false">nl-NL</string>
+    <string name="language_code_pl_pl" translatable="false">pl-PL</string>
+    <string name="language_code_pt_br" translatable="false">pt-BR</string>
+    <string name="language_code_pt_pt" translatable="false">pt-PT</string>
+    <string name="language_code_ru_ru" translatable="false">ru-RU</string>
+    <string name="language_code_sv_se" translatable="false">sv-SE</string>
+    <string name="language_code_th_th" translatable="false">th-TH</string>
+    <string name="language_code_cs_cz" translatable="false">cs-CZ</string>
+    <string name="language_code_ro_ro" translatable="false">ro-RO</string>
+    <string name="language_code_hu_hu" translatable="false">hu-HU</string>
+    <string name="language_code_vi" translatable="false">vi</string>
+    <string name="language_code_ar_sa" translatable="false">ar-SA</string>
+    <string name="language_code_in_id" translatable="false">in-ID</string>
+    <string name="language_code_ta" translatable="false">ta</string>
+    <string name="language_code_hi_in" translatable="false">hi-IN</string>
+    <string name="language_code_el_gr" translatable="false">el-GR</string>
+    <string name="language_code_ms_my" translatable="false">ms-MY</string>
+    <string name="language_code_ca_es" translatable="false">ca-ES</string>
+    <string name="language_code_nb_no" translatable="false">nb-NO</string>
+    <string name="language_code_sk_sk" translatable="false">sk-SK</string>
+    <string name="language_code_bg_bg" translatable="false">bg-BG</string>
+    <string name="language_code_he_il" translatable="false">he-IL</string>
+    <string name="language_code_tr_tr" translatable="false">tr-TR</string>
+    <string name="language_code_hr_hr" translatable="false">hr-HR</string>
+    <string name="language_code_sl_si" translatable="false">sl-SI</string>
 
 
 

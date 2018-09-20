@@ -33,7 +33,6 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
     // 提示icon
     private ImageView[] tips;
     private ViewGroup indicationsGroup;
-    
     private SPManager spManager;
 
 
